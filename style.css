@@ -46,10 +46,32 @@ header p {
     padding: 10px;
     width: 350px;
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     background-color: rgb(215, 231, 231);
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0px;
+    outline: none;
+}
+
+.btn-add {
+    color: rgb(59, 60, 61);
+    border: none;
+    height: 40px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 30px;
+    background-color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-add:hover,
+.btn-add:active {
+    background-color: rgb(233, 87, 87);
+    color: #fff;
 }
 
 .list-container {
@@ -63,7 +85,7 @@ header p {
     text-align: left;
     list-style-type: none;
     padding: 18px;
-    color: rgb(251, 249, 249);
+    color: rgba(90, 52, 52, 0.986);
     font-weight: bold;
     position: relative;
 }
