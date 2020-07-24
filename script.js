@@ -4,10 +4,16 @@ const deleteBtn = document.querySelector(".btn-delete");
 const listContainer = document.querySelector(".list-container");
 const container = document.querySelector(".container");
 
-let taskArray = [];
-let height = 700;
-let id = 0;
 
+const localStorageList = JSON.parse(localStorage.getItem('taskArray'));
+const localStorageHeight = JSON.parse(localStorage.getItem('height'));
+const localStorageId = JSON.parse(localStorage.getItem('id'));
+
+let taskArray = localStorage.getItem('taskArray') !== null ? localStorageList : [];
+let height = localStorage.getItem('height') !== null ? localStorageHeight : 500;
+let id = localStorage.getItem('id') !== null ? localStorageId : 0;
+
+init();
 
 // Add task to list
 function addToList(e) {
@@ -22,12 +28,11 @@ function addToList(e) {
         text: inputValue
     }
     taskArray.push(task);
-    console.log(taskArray);
     height = height + 65;
     container.style.height = `${height}px`;
     input.value = "";
-    // const {ID, text} = task;
     refreshList();
+    updateLocalStorage();
   }
 }
 
@@ -37,6 +42,7 @@ function removeFromList(id) {
     height = height - 65;
     container.style.height = `${height}px`;
     refreshList();
+    updateLocalStorage();
 }
 
 // Refresh task list
@@ -49,6 +55,17 @@ function refreshList() {
         item.innerHTML = `${element.text} <button onclick="removeFromList(${element.ID})" class="btn-delete">delete</button>`;
         listContainer.appendChild(item);
     });
+}
+
+// Update local storage
+function updateLocalStorage() {
+    localStorage.setItem('taskArray', JSON.stringify(taskArray));
+    localStorage.setItem('height', height);
+    localStorage.setItem('id', id);
+}
+
+function init() {
+    refreshList();
 }
 
 // Event listeners
