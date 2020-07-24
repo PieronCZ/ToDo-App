@@ -13,7 +13,7 @@ body {
     background-color: #fd8421f3;
     height: 700px;
     margin-left: 35%;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 5px 20px 2px rgba(0,0,0, 0.6);
 }
 
@@ -28,6 +28,12 @@ header {
 header h1 {
     text-transform: uppercase;
     text-align: center;
+    background-color: rgb(231, 116, 9);
+    padding: 30px;
+    border-radius: 20px;
+    color: bisque;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);
+    margin-top: 50px;
 }
 
 header p {
@@ -47,14 +53,14 @@ header p {
     width: 350px;
     font-size: 18px;
     margin-bottom: 30px;
-    background-color: rgb(215, 231, 231);
+    background-color: rgb(255, 239, 220);
     border-radius: 20px;
     border: 0px;
     outline: none;
 }
 
 .btn-add {
-    color: rgb(59, 60, 61);
+    color: #81440b;
     border: none;
     height: 40px;
     border-radius: 50px;
@@ -64,13 +70,13 @@ header p {
     font-weight: bold;
     outline: none;
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: rgb(255, 239, 220);
     transition: background-color 0.5s, color 0.5s;
 }
 
 .btn-add:hover,
 .btn-add:active {
-    background-color: rgb(233, 87, 87);
+    background-color: rgb(134, 60, 10);
     color: #fff;
 }
 
@@ -95,7 +101,7 @@ header p {
 }
 
 .list-container .item button {
-    background-color: red;
+    background-color: rgb(255, 72, 0);
     color: #fff;
     font-size: 20px;
     border: none;
